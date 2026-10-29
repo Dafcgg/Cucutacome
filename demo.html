@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Prueba el recorrido de un pedido en la demo guiada e interactiva de Cúcuta Come.">
+  <title>Prueba el recorrido interactivo · Cúcuta Come</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23E53935'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-size='29' font-weight='800' fill='%23FFFFFF'%3ECC%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/demo.css">
+  <link rel="stylesheet" href="assets/css/improvements.css">
+  <script src="assets/js/demo.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="demo.html#contenido">Saltar al contenido</a>
+
+  <header class="capsule-header-wrapper" id="main-header">
+    <div class="container">
+    <nav class="capsule-nav-bar" aria-label="Navegación principal">
+    <a class="brand header-logo-interactive" href="index.html" id="header-interactive-logo" aria-label="Cúcuta Come - Inicio">
+      <span class="logo-text-brand"><span class="brand-cucuta">Cúcuta</span><span class="brand-come">C<span class="letter-o-bite">o</span>me</span></span>
+    </a>
+    <div class="nav top-nav" id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#clientes">Explorar restaurantes</a>
+      <a href="index.html#restaurantes">Para restaurantes</a>
+      <div class="top-nav-dropdown">
+        <a class="top-nav-dropdown__trigger" href="como-funciona.html">Cómo funciona <span aria-hidden="true">▾</span></a>
+        <div class="top-nav-dropdown__menu">
+          <a href="como-funciona.html#sistema">Comandas y cocina</a>
+          <a href="como-funciona.html#domicilios">Gestión de domiciliarios</a>
+          <a href="como-funciona.html#inventario">Inventario con recetas</a>
+          <a href="demo.html">Demo interactiva</a>
+        </div>
+      </div>
+      <a href="planes.html">Planes</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="index.html#contacto" class="nav-contact-link btn-header-cta">Agendar demostración<span class="btn-arrow-circle" aria-hidden="true">&rarr;</span></a>
+    </div>
+    <button class="language-toggle" type="button" data-language-toggle aria-label="Cambiar idioma a inglés" aria-pressed="false">ES <span aria-hidden="true">|</span> EN</button>
+    <button aria-controls="nav" aria-expanded="false" aria-label="Abrir menú" class="burger" id="burger" type="button">
+      <svg aria-hidden="true" class="icon icon--menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg aria-hidden="true" class="icon icon--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
+    </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="demo-interactive-section">
+    <div class="container">
+      <div class="demo-header-text" data-reveal>
+        <span class="demo-tag-pill"><span class="tag-pulse-red" aria-hidden="true"></span> DEMO GUIADA E INTERACTIVA · 2 MINUTOS</span>
+        <h1 class="demo-main-title" data-i18n="demo-title">Haz un pedido. Mira cómo llega al panel.</h1>
+        <p class="demo-main-subtitle" data-i18n="demo-lead">
+          Este recorrido simula en vivo lo que vive tu cliente al pedir y lo que ve tu cocina en el panel de Cúcuta Come. No cobra ni necesita cuenta: los datos son de ejemplo.
+        </p>
+
+        <div class="demo-steps-indicator" aria-label="Pasos de la demo">
+          <span class="step-pill active" id="step-pill-1" aria-current="step"><i class="step-num">1</i> Elige platos</span>
+          <span class="step-pill-line" aria-hidden="true"></span>
+          <span class="step-pill" id="step-pill-2"><i class="step-num">2</i> Envía pedido</span>
+          <span class="step-pill-line" aria-hidden="true"></span>
+          <span class="step-pill" id="step-pill-3"><i class="step-num">3</i> Cocina y gestiona</span>
+        </div>
+      </div>
+
+      <div class="demo-workspace-grid" data-reveal>
+        <section class="demo-card client-view-card" aria-labelledby="menu-title">
+          <div class="demo-card-head">
+            <span class="view-tag-label tag-client">VISTA DEL CLIENTE</span>
+            <h2 id="menu-title">Menú de ejemplo</h2>
+            <p>Así comienza el comensal desde el enlace directo de tu restaurante.</p>
+          </div>
+
+          <div class="demo-menu-list">
+            <article class="demo-menu-item">
+              <div class="product-thumb" aria-hidden="true"><span>Plato</span></div>
+              <div class="item-info-text">
+                <h3>Tacos de picaña</h3>
+                <small>Orden de tres tacos con guacamole</small>
+                <strong class="item-price">$16.000</strong>
+              </div>
+              <button type="button" class="btn-add-item" data-add="tacos">+ Agregar</button>
+            </article>
+
+            <article class="demo-menu-item">
+              <div class="product-thumb" aria-hidden="true"><span>Bebida</span></div>
+              <div class="item-info-text">
+                <h3>Limonada de coco</h3>
+                <small>Bebida fría y refrescante</small>
+                <strong class="item-price">$7.000</strong>
+              </div>
+              <button type="button" class="btn-add-item" data-add="limonada">+ Agregar</button>
+            </article>
+
+            <article class="demo-menu-item">
+              <div class="product-thumb" aria-hidden="true"><span>Plato</span></div>
+              <div class="item-info-text">
+                <h3>Hamburguesa de la casa</h3>
+                <small>Carne a la parrilla, queso y papas</small>
+                <strong class="item-price">$22.000</strong>
+              </div>
+              <button type="button" class="btn-add-item" data-add="burger">+ Agregar</button>
+            </article>
+          </div>
+
+          <div class="demo-modality-wrap">
+            <span class="modality-label">MODALIDAD DEL PEDIDO:</span>
+            <div class="modality-buttons-group">
+              <button type="button" class="type-pill" data-type="DOMICILIO">Domicilio</button>
+              <button type="button" class="type-pill" data-type="MESA 4">En mesa</button>
+              <button type="button" class="type-pill is-selected" data-type="PARA RECOGER">Para recoger</button>
+            </div>
+          </div>
+
+          <div class="demo-cart-summary-box">
+            <h3>Tu pedido</h3>
+            <ul class="cart-list cart-items-dynamic" id="cart-items">
+              <li class="empty-cart-msg">Agrega un producto del menú para empezar.</li>
+            </ul>
+            <div class="cart-total-bar">
+              <span>Total para el consumidor:</span>
+              <strong id="cart-total">$0</strong>
+            </div>
+            <button class="btn-submit-order" id="send-order" type="button" disabled>
+              Enviar comanda de prueba &rarr;
+            </button>
+          </div>
+        </section>
+
+        <section class="demo-card kitchen-view-card" aria-labelledby="panel-title">
+          <div class="demo-card-head">
+            <span class="view-tag-label tag-kitchen">VISTA DEL RESTAURANTE</span>
+            <h2 id="panel-title">Panel de Comandas</h2>
+            <p>Tu equipo ve el pedido al instante, organiza la preparación y coordina a los domiciliarios propios del restaurante.</p>
+          </div>
+
+          <div class="kitchen-display-area">
+            <div id="order-empty" class="kitchen-placeholder-box">
+              <span class="placeholder-icon-wrap empty__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3.5h12v17l-3-2-3 2-3-2-3 2v-17Z"/><path d="M9.5 8.5h5M9.5 12.5h5"/></svg></span>
+              <p>El pedido aparecerá aquí tan pronto el cliente pulse «Enviar comanda».</p>
+            </div>
+
+            <article id="order-card" class="order kitchen-ticket-card-live" hidden>
+              <div class="order-head">
+                <strong id="order-type-label">PEDIDO #1042 · PARA RECOGER</strong>
+                <span id="order-status" class="badge">Nuevo</span>
+              </div>
+              <p class="order-meta">Cliente: Camila Rojas · Recibido ahora mismo</p>
+              <ul id="order-items" class="order-items-list"></ul>
+              <div class="total ticket-total-row">
+                <span>Total a cobrar al consumidor</span>
+                <strong id="order-total">$0</strong>
+              </div>
+              <button class="btn-submit-order" id="advance-order" type="button">
+                Aceptar y preparar &rarr;
+              </button>
+            </article>
+
+            <div id="order-completed" class="completed-card" hidden>
+              <div class="completed-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6.5 9.5 17 4 11.5"/></svg></div>
+              <h3>¡Recorrido terminado con éxito!</h3>
+              <p>Tu comanda fue registrada, preparada y entregada sin papel ni confusiones.</p>
+              <a class="primary link" href="index.html#contacto">Agendar demostración para mi restaurante →</a>
+            </div>
+          </div>
+
+          <div class="kitchen-footer-actions">
+            <p id="demo-notice" class="demo-hint-info" role="status" aria-live="polite">
+              Selecciona productos a la izquierda para armar el pedido de prueba.
+            </p>
+            <button id="restart-demo" class="btn-reset-full" type="button">↻ Reiniciar recorrido</button>
+          </div>
+        </section>
+      </div>
+
+      <section class="demo-cta-dark-card" data-reveal>
+        <div class="cta-dark-content">
+          <h2>¿Quieres verlo funcionando en tu restaurante?</h2>
+          <p>Agendamos una demostración presencial en tu negocio con tu propio menú y te enseñamos cómo cocina, meseros y caja trabajan sincronizados.</p>
+          <div class="cta-dark-actions">
+            <a href="index.html#contacto" class="btn-cta-red-lg">Agendar demostración presencial &rarr;</a>
+          </div>
+        </div>
+        <div class="cta-dark-footer-line">
+          <span>El sistema para restaurantes es desarrollado e instalado por ParaTouch en Cúcuta · Contacto: <strong>cucutacomee@gmail.com</strong> · WhatsApp: <strong>320 313 8714</strong></span>
+        </div>
+      </section>
+    </div>
+  </main>
+  <section class="ig-band instagram-banner-section" aria-labelledby="ig-title">
+    <div class="container">
+      <div class="ig-card instagram-card-wrap" data-reveal>
+        <div class="insta-icon-circle" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </div>
+        <div class="ig-card__text insta-text-info">
+          <h2 id="ig-title">Síguenos en Instagram</h2>
+          <p>Novedades y restaurantes de Cúcuta en <strong>@cucuta.come</strong>.</p>
+        </div>
+        <a class="primary link btn-insta-follow" href="https://instagram.com/cucuta.come" target="_blank" rel="noopener">Seguir @cucuta.come &rarr;</a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-modern">
+    <div class="container footer-grid">
+      <div class="footer-col-brand">
+        <a href="index.html" class="footer-logo" aria-label="Cúcuta Come, ir al inicio">
+          <span class="logo-text">Cúcuta<span class="logo-red">Come</span></span>
+        </a>
+        <p class="footer-tagline">
+          La plataforma local que conecta a los amantes de la buena comida con los mejores restaurantes de Cúcuta.
+        </p>
+        <a href="https://wa.me/573203138714?text=Hola%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20C%C3%BAcuta%20Come" target="_blank" rel="noopener" class="footer-wa-btn">
+          <span class="wa-dot" aria-hidden="true"></span> Agendar demostración por WhatsApp &rarr;
+        </a>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Para Clientes</h2>
+        <ul class="footer-links">
+          <li><a href="index.html#clientes">Explorar restaurantes</a></li>
+          <li><a href="index.html#clientes">Consultar menús digitales</a></li>
+          <li><a href="demo.html">Probar pedido de muestra</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Para Restaurantes</h2>
+        <ul class="footer-links">
+          <li><a href="index.html#restaurantes">Panel de gestión y cocina</a></li>
+          <li><a href="como-funciona.html">¿Cómo funciona el sistema?</a></li>
+          <li><a href="planes.html">Planes y características</a></li>
+          <li><a href="index.html#contacto">Agendar demostración</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h2 class="footer-heading">Contacto y Soporte</h2>
+        <ul class="footer-links">
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        </ul>
+        <div class="footer-contact-pills">
+          <a href="mailto:cucutacomee@gmail.com" class="footer-pill-link pill-email">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>cucutacomee@gmail.com</span>
+          </a>
+          <a href="https://instagram.com/cucuta.come" target="_blank" rel="noopener" class="footer-pill-link pill-insta">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span>Instagram @cucuta.come</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <div class="container bottom-bar-flex">
+        <p>© 2026 Cúcuta Come · Un producto de <strong>ParaTouch</strong> en Cúcuta, Colombia.</p>
+        <p class="footer-conditions">Condiciones y disponibilidad sujetas a confirmación.</p>
+      </div>
+    </div>
+  </footer>
+  <div id="chatbot-widget" class="chatbot-container">
+    <div id="chatbot-tooltip" class="chatbot-tooltip">
+      <span>¿Tienes dudas sobre pedidos o tu restaurante? 💬</span>
+      <button id="chatbot-tooltip-close" class="tooltip-close-btn" type="button" aria-label="Cerrar aviso">&times;</button>
+    </div>
+    <button id="chatbot-launcher" class="chatbot-launcher" type="button" aria-label="Abrir asistente virtual" aria-expanded="false" aria-controls="chatbot-window">
+      <span class="launcher-online-dot" aria-hidden="true"></span>
+      <svg class="icon-chat-open" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z"/></svg>
+      <svg class="icon-chat-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+    <section id="chatbot-window" class="chatbot-window" role="dialog" aria-modal="false" aria-hidden="true" aria-labelledby="chatbot-title" inert>
+      <div class="chatbot-header">
+        <div class="bot-avatar-wrap"><div class="bot-avatar-circle"><img src="assets/img/mascota/sorprendida-movil.webp" alt="" class="bot-avatar-img" width="40" height="40" loading="lazy" decoding="async"></div><span class="bot-status-dot" aria-label="En línea"></span></div>
+        <div class="bot-info"><h2 id="chatbot-title">Asistente Cúcuta Come</h2><small>En línea · Respuesta al instante</small></div>
+        <button id="chatbot-close-btn" class="chatbot-header-close" type="button" aria-label="Cerrar chat">&times;</button>
+      </div>
+      <div id="chatbot-messages" class="chatbot-messages" role="log" aria-live="polite" aria-relevant="additions"><div class="chat-msg msg-bot">¡Hola! 👋 Bienvenido a <strong>Cúcuta Come</strong>. ¿En qué te puedo ayudar hoy?</div></div>
+      <div id="chatbot-quick-options" class="chatbot-quick-options" aria-label="Preguntas frecuentes">
+        <button class="quick-pill pill-highlight" type="button" data-question="quiz">🎯 Descubrir mi plan ideal</button><button class="quick-pill" type="button" data-question="pedido">¿Cómo hacer un pedido?</button><button class="quick-pill" type="button" data-question="restaurante">Tengo un restaurante</button><button class="quick-pill" type="button" data-question="domicilios">¿Quién entrega los pedidos?</button><button class="quick-pill" type="button" data-question="planes">Ver todos los planes</button>
+      </div>
+      <form id="chatbot-form" class="chatbot-footer"><input type="text" id="chatbot-input" placeholder="Escribe tu duda aquí..." aria-label="Escribe tu duda" autocomplete="off" maxlength="500"><button type="submit" class="chatbot-send-btn" aria-label="Enviar mensaje"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button></form>
+    </section>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
