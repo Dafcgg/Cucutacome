@@ -1,5 +1,0 @@
-Fotos reales para la demo (opcional):
-Guarda aquí tus fotos con estos nombres exactos y aparecerán solas en la demo:
-  tacos.jpg  ·  limonada.jpg  ·  hamburguesa.jpg
-Tamaño recomendado: 256x256 px (cuadradas), menos de 60 KB cada una.
-Mientras no existan, la demo muestra una miniatura neutra con la categoría.
